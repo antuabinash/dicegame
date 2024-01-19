@@ -18,7 +18,7 @@
             margin-top: 10px;
         }
         th, td {
-            border: 1px solid #ddd;
+            border: 3px solid #777778;
             padding: 8px;
             text-align: center;
             cursor: pointer;
@@ -162,6 +162,7 @@
         }
 
         function rollDice() {
+            var dice = document.getElementById('dice');
             var diceFace = document.getElementById('diceFace');
             diceFace.innerHTML = ''; // Clear previous dots
 
@@ -176,6 +177,18 @@
             // Play dice roll sound
             var diceSound = document.getElementById('diceSound');
             diceSound.play();
+
+            // Rotate the dice with a rolling animation
+            var rotation = 0;
+            var interval = setInterval(function() {
+                rotation += 15;
+                dice.style.transform = 'rotate(' + rotation + 'deg)';
+
+                if (rotation >= 360) {
+                    clearInterval(interval);
+                    dice.style.transform = 'rotate(0deg)';
+                }
+            }, 50);
         }
 
         function changeColor(circle) {

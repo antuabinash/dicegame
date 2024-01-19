@@ -56,14 +56,10 @@
             border-radius: 50%;
             margin-bottom: 15%;
         }
-        #middleTable {
-            margin-top: 20px;
-        }
-        #circles {
-            margin-top: 20px;
+        .circle-row {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
+            margin-top: 20px;
         }
         .circle {
             width: 30px;
@@ -107,14 +103,18 @@
         </tr>
     </table>
 
-    <div id="circles">
-        <!-- Adding 12 circles -->
+    <div class="circle-row">
+        <!-- First line of circles -->
         <div class="circle" onclick="changeColor(this)"></div>
         <div class="circle" onclick="changeColor(this)"></div>
         <div class="circle" onclick="changeColor(this)"></div>
         <div class="circle" onclick="changeColor(this)"></div>
         <div class="circle" onclick="changeColor(this)"></div>
         <div class="circle" onclick="changeColor(this)"></div>
+    </div>
+
+    <div class="circle-row">
+        <!-- Second line of circles -->
         <div class="circle" onclick="changeColor(this)"></div>
         <div class="circle" onclick="changeColor(this)"></div>
         <div class="circle" onclick="changeColor(this)"></div>
